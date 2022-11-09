@@ -6,6 +6,8 @@ Language: Golang
 
 API: RESTFul
 
+Database: Inmemory Slice.
+
 ## How to Run
 
 ```
@@ -14,7 +16,7 @@ go run cmd/main.go
 
 ## How to Test
 
-There are two endpoints in this services. 
+There are two endpoints in this services.
 
 1) Post Metrics.
 
@@ -38,7 +40,6 @@ curl --location --request POST 'localhost:8080/v1/metrics' \
 ```
 curl --location --request GET 'localhost:8080/v1/metrics'
 ```
-
 
 ## How to check the code coverage
 

@@ -8,10 +8,13 @@ import (
 )
 
 func Init() {
+	// initialize router.
 	r := mux.NewRouter()
 
+	// register handlers.
 	r.HandleFunc("/v1/metrics", PostMetrics).Methods(http.MethodPost)
 	r.HandleFunc("/v1/metrics", GetMetrics).Methods(http.MethodGet)
 
+	// listen and serve on port.
 	http.ListenAndServe(":"+config.HTTPPort, r)
 }
